@@ -7,7 +7,7 @@ The sum of these multiples is 23.
 
 Find the sum of all the multiples of 3 or 5 below 1000.
 """
-from timeit import timeit
+from src import time_it
 
 
 def get_lcm(a: int, b: int):
@@ -32,6 +32,4 @@ def main(upper_bound: int = 1000):
 
 
 if __name__ == "__main__":
-    reps = 1000
-    print(main())
-    print(f"{round(timeit(main, number=reps) / reps * 1e6, 2)} µsec per loop")
+    time_it(main)

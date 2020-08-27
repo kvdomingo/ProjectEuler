@@ -10,7 +10,7 @@ By starting with 1 and 2, the first 10 terms will be:
 By considering the terms in the Fibonacci sequence whose values do not exceed four million,
 find the sum of the even-valued terms.
 """
-from timeit import timeit
+from src import time_it
 
 
 def main(upper_bound: int = 4e6):
@@ -23,6 +23,4 @@ def main(upper_bound: int = 4e6):
 
 
 if __name__ == "__main__":
-    reps = 1000
-    print(main())
-    print(f"{round(timeit(main, number=reps) / reps * 1e6, 2)} µsec per loop")
+    time_it(main)
