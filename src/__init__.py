@@ -2,7 +2,7 @@ from timeit import timeit
 from typing import Callable, AnyStr, Union
 
 
-def time_it(obj: Union[AnyStr, Callable], reps: int = 1000):
+def time_it(obj: Union[AnyStr, Callable], reps: int = 10):
     if isinstance(obj, str):
         print(eval(obj))
     else:
