@@ -2,7 +2,9 @@
 ${title}
 Problem ${number}
 
+% for description in descriptions:
 ${description}
+% endfor
 """
 from src import time_it
 
